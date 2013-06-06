@@ -6,9 +6,9 @@
 #	Last Modified: 2013/ 5/ 5
 #==========================================
 
-CC=gcc
+CC=gcc -I/usr/include/ncurses
 CFLAGS=-O
 
 sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+	$(CC) $(CFLAGS) -o sl sl.c -lcurses
 

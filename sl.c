@@ -32,7 +32,7 @@
 /* sl version 1.00 : SL runs vomitting out smoke.                            */
 /*						by Toyoda Masashi 1992/12/11 */
 
-#include <curses.h>
+#include "curses.h"
 #include <signal.h>
 #include <unistd.h>
 #include "sl.h"
@@ -75,6 +75,18 @@ int main(int argc, char *argv[])
 	    option(argv[i] + 1);
 	}
     }
+	if(i < 2){
+		srand((unsigned)time(NULL));
+		if(rand() % 7 == 0){
+			option("a");
+		} if(rand() % 100 == 0){
+			option("F");
+		} if(rand() % 10 == 0){
+			option("l");
+		} if(rand() % 4 == 0){
+			option("c");
+		}
+	}
     initscr();
     signal(SIGINT, SIG_IGN);
     noecho();
@@ -92,7 +104,7 @@ int main(int argc, char *argv[])
 	    if (add_D51(x) == ERR) break;
 	}
 	refresh();
-	usleep(40000);
+	usleep(20000);
     }
     mvcur(0, COLS - 1, LINES - 1, 0);
     endwin();
