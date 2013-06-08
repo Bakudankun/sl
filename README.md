@@ -7,4 +7,10 @@ all.
 
 Copyright 1993,1998,2013 Toyoda Masashi (mtoyoda@acm.org)
 
+=======================================
 
+When no option is given, SL set option(s):
+-c 1in4,
+-a 1in7,
+-l 1in10,
+-F 1in100
