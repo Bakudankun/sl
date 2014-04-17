@@ -1,14 +1,13 @@
 #==========================================
-#    Makefile: makefile for sl 5.0
-#	Copyright 1993, 1998, 2013
-#                 Toyoda Masashi 
+#    Makefile: makefile for sl 5.1
+#	Copyright 1993, 1998, 2014
+#                 Toyoda Masashi
 #		  (mtoyoda@acm.org)
-#	Last Modified: 2013/ 5/ 5
+#	Last Modified: 2014/03/31
 #==========================================
 
 CC=gcc -I/usr/include/ncurses
 CFLAGS=-O
 
 sl: sl.c sl.h
-	$(CC) $(CFLAGS) -o sl sl.c -lcurses
-
+	$(CC) $(CFLAGS) -o sl sl.c -lncurses
